@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+title{
+    background-color: #ccc;
+}
+/* body {
+    background-color: #cac3c3;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+    overflow: hidden;
+} */
+body{
+        /* display: flex;
+        align-items: flex-end; */
+        height: 100vh;
+        overflow: hidden;
+}
+.player {
+    width: 550px;
+    color: white;
+    position: relative;
+    /* left: -100%; */
+    top: calc(100% - 450px);
+}
+#showplayer{
+    position: relative;
+    top: 40%;
+}
+main {
+    position: relative;
+    height: 180px;
+    padding: 25px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    filter: blur(20px);
+}
+.music-player__pointer {
+    position: absolute;
+    top: 50px;
+    left: 150px;
+    
+}
+.music-player__pointer img {
+    width: 25px;
+    height: 77px;
+    transform: rotate(-10deg);
+    transition: rotate 1s  linear;
+    transform-origin: top center;
+}
+
+.music-player__disc {
+    width: 130px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(https://demo.lanrenzhijia.com/demo/68/6840/demo/images/cd.png);
+    background-size: 100%;
+  
+}
+
+.music-player__disc img {
+    width: 65%;
+    height: 65%;
+    border-radius: 50%;
+}
+.playing>.music-player__pointer img{
+    transform: rotate(5deg) !important;
+    transition: rotate 1s linear;
+    transform-origin: top center;
+}
+.playing>.music-player__disc img{
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+.music-player__controls {
+    margin-left: 40px;
+    width: 320px;
+}
+
+.music__info--title {
+    font-size: 16px;
+}
+
+.music__info--singer {
+    color: #ccc;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.control {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+}
+.btn i{
+    margin-right: 10px;
+}
+.icon-previous,.icon-next{
+    font-size: 19px;
+}
+.volume {
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+}
+.total_volume,.progress_bar{
+    background: rgba(0, 0, 0, 0.3);
+    height: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.total_volume {
+    margin-left: 5px;
+    width: 100px;
+}
+.bark,.curent {
+    width: 0;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    background: rgb(12, 182, 212);
+}
+
+.progress_bar {
+    margin: 18px 0 5px 0;
+    width: 100%;
+}
+.play_time {
+    display: flex;
+    justify-content: space-between;
+}
+.play_time span{
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 1px;
+    font-size: 12px;
+}
+.menu {
+    border-radius: 5px;
+    margin-top: 15px;
+    list-style: none;
+    padding: 10px;
+    background-color: rgb(100, 98, 94);
+}
+
+.menu li {
+    width: 25%;
+    line-height: 30px;
+    color: white;
+    position: relative;
+}
+.menu i{
+    position: absolute;
+}
+.menu div{
+    cursor: pointer;
+}
+.song{
+    margin-left: 30px;
+    color: #ccc;
+    font-size: 14px;
+}
+.active{
+    color:#FFFFFF ;
+}
